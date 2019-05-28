@@ -1,0 +1,71 @@
+/*boot页面使用bootstrap框架重做 */
+.site-header{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 13px 0;
+    background-color:rgba(0,0,0,.2);
+    z-index: 999;
+}
+.site-header .contented{
+	max-width:1170px;
+    margin: 0  auto;
+	position:relative;
+}
+.site-header .menu_btn{
+    position: absolute!important;
+    display: block;
+    left: 0;
+    top: 50%;
+	width: 30px;
+    height: 18px;
+}
+
+.site-header .menu_btn:after{
+	content:'Menu';
+	position: absolute;
+    left: calc(100% + 20px);
+    top: 0;
+    text-transform: uppercase;/*大写字母*/
+    letter-spacing: .1em;
+    color: #8a9ca0;
+}
+.site-header .menu_btn .menu_icon{
+	display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+	margin:9px 0 0;
+	position:relative;
+}
+.site-header .menu_icon:after{
+	content:'';
+	display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+	position:absolute;
+	top:9px;
+}
+.site-header .menu_icon:before{
+	content:'';
+	display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+	position:absolute;
+	top:-9px;
+}
+.site-header .logoBox{
+	font: 0/0 a;
+    color: transparent;
+    display: block;
+    width: 200px;
+    height: 120px;
+    background:url(../image/Logo-1.png) no-repeat bottom;
+    background-size: auto 100%;
+	margin:0 auto;
+}

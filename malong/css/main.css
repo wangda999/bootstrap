@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+/*公用属性*/
+div{ display:block;}
+.btn{
+	display: inline-block;
+    padding: 10px 32px;
+    font-size: 12px;
+    font-size: 0.7058823529em;
+    line-height: 2.1666666667;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 0;
+    border: 2px solid;}
+
+/*首页头部*/
+/*导航栏*/
+.site_head{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 13px 0;
+    background-color:transparent;
+    z-index: 999;}
+.contented{
+	max-width:1170px;
+    margin: 0  auto;
+	position:relative;}
+.menu_btn{
+    position: absolute!important;
+    display: block;
+    left: 0;
+    top: 50%;
+	width: 30px;
+    height: 18px;}
+.menu_btn:before{display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;}
+.menu_btn:after{
+	content:'Menu';
+	position: absolute;
+    left: calc(100% + 20px);
+    top: 0;
+    text-transform: uppercase;/*大写字母*/
+    letter-spacing: .1em;
+    color: #8a9ca0;}
+.menu_btn .menu_icon{
+	display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+	margin:9px 0 0;
+	position:relative;}
+.menu_icon:after{
+	content:'';
+	display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+	position:absolute;
+	top:9px;}
+.menu_icon:before{
+	content:'';
+	display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+	position:absolute;
+	top:-9px;}
+.logoBox{
+	font: 0/0 a;
+    color: transparent;
+    display: block;
+    width: 200px;
+    height: 120px;
+    background:url(../image/Logo-1.png) no-repeat bottom;
+    background-size: auto 100%;
+	margin:0 auto;}
+	
+
+/*网页内容*/
+/*section1 banner*/
+.backImg{ background:url(../image/BG-01.jpg) 50% 50% no-repeat; background-size:cover; height:100vh; width:100%; position:relative;background-attachment: fixed;}
+.bannerBody { position: absolute; top:50%; left:0; right:0;    
+	transform: translateY(-50%);/*垂直居中*/}
+.banner_text{ width:33.3%;}
+.banner_text p{    
+	border-left: 4px solid #b79846;
+    padding-left: 39px;
+	color:#FFF;
+	margin-bottom:26px;
+	font-size:3em;
+	line-height:1.3;
+	font-family: Playfair Display,serif;
+	}
+.banner_text span{
+	margin-left: 43px;
+	font-size:1.58em;
+	color: #d6d6d6;
+	line-height:1.6;
+	display:block;}
+.banner_text a {
+	display: inline-block;
+	margin-left:43px;
+	margin-top:26px;
+	color:#b79846;
+	line-height:1;
+	font-size:1.25em;}
+.banner_text a:hover{
+	background-color:#b79846;
+	color:#FFF;
+	border-color:#b79846;}
+.sanjiao {
+	display:block;
+	position: absolute;
+	bottom:26px;
+	left: calc(50% - 13px);
+	z-index:20;
+	background-color:transparent;
+	}
+.sanjiao:after{
+	content: '';
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-top: 2px solid #989898;
+    border-left: 2px solid #989898;
+    transform: rotate(-135deg);
+    animation: updown 1s infinite;
+    }
+@keyframes updown
+{
+    0%{transform: translateY(-20px) rotate(-135deg)}
+    50%{transform: translateY(0)rotate(-135deg)}
+    100%{transform: translateY(-20px)rotate(-135deg)}
+}
+
+/*电影海报轮播图*/
+.movie_img{ margin-bottom:52px; position: relative;}
+.movie_imgBox{ padding-top:2px;  }
+.prev{position:absolute;top: calc(50% - 26px);left: 26px; width: 26px; height: 26px; border: 0; border-bottom: #fff 2px solid;border-right: #fff 2px solid; transform: rotate(135deg);z-index: 10;}
+.next{position:absolute;top: calc(50% - 26px);right: 26px; width: 26px; height: 26px; border: 0; border-bottom: #fff 2px solid;border-right: #fff 2px solid; transform: rotate(-45deg);z-index: 10;}
+.moive_content{  width: calc(100% + 2px);width:100%;; overflow:-hidden; }
+.liBox{ /*width:10000px;*/ display:block; position:relative; left:-676px;}
+.liBox li{ float:left; width:676px; display:block; height:100%; position:relative;background-size: cover; margin:0 1px;}
+.img_01{ background:url(../image/banner-01.png) left top no-repeat; min-height:320px;}
+.img_02{ background:url(../image/banner-02.png) left top no-repeat;min-height:320px;}
+.img_03{ background:url(../image/banner-03.png) left top no-repeat;min-height:320px;}
+.img_04{ background:url(../image/banner-04.png) left top no-repeat;min-height:320px;}
+/*文字内容*/
+.movie_text{ position:absolute; left:52px; bottom:39px; width:60%;color:#f5f0dd;}
+.movie_item h2{  font-size:2.5em; margin-bottom:13px; line-height:1.2;}
+.movie_item p{ font-size:1.6em; margin-bottom:13px; line-height:1.2;}
+/*文字内容*/
+.imgPointBox{ text-align:center; padding-top:13px; display:block;}
+.pointe_item { display:inline-block; margin:0 5px;}
+.point_icon{font: 0/0 a;color: transparent;width: 13px;height: 13px;background: #adc4c5;border: none;border-radius: 80%;cursor: pointer;}
+.point_icon:focus{ outline:none;}
+
+/*马龙白兰度获奖记录*/
+.award_tit{color: #395166; font-size:2.5em; margin-bottom:52px; line-height:1.2; text-align:center; }
+.rec_list{margin-left:-26px; font-size:0; line-height:0;}
+.rec_item {display:inline-block; vertical-align:top; width:33.3%}
+.rec_content{margin-left:26px;}
+.rec_content img{ max-width:100%; height:auto; vertical-align:bottom; line-height:1.3}
+.rec_text{ padding:26px 13px;}
+.rec_text h3{    
+	margin-bottom: 26px;
+    color: #395166;
+	font-size: 1.1764705882rem;
+    line-height: 1.3;
+	font-weight:400;}
+.rec_text p{margin-bottom: 26px;
+	font-family: Lato,sans-serif;
+    font-size: 17px;
+    font-size: 1rem;
+    line-height: 1.5294117647;
+    color: #545454;}
+	
+	
+/*要叫什么*/
+
+.movie{position: relative;}
+.movie .moive_content{ padding-left:0;}
+.movie .liBox li{ width:629px;}
+/*zhaopianqiang*/
+.Instagram { margin:0 0 35px;}
+.maLong_imgBox li{ float:left; width:25%; }
+.maLong_imgBox ul{overflow:hidden;}
+/*页面底部*/
+.site_bottom{ background-color:#2c3242; color:#FFF;}
+.sb_top{ background-color:#f5f0dd; padding: 6px 26px; border-top:1px solid #e6e6e6}
+.logoList{ margin:0 auto; width:100%; text-align:center;}
+.logoItem{ padding:0 39px; display: inline-block;}
+.logoItem a{ display:block;}
+.bg_logo01{background:url(../image/icon/21thFox.png) left center no-repeat; width:76px; height:70px;}
+.bg_logo02{background:url(../image/icon/21thFox.png) left center no-repeat; width:76px; height:70px;}
+.bg_logo03{background:url(../image/icon/21thFox.png) left center no-repeat; width:76px; height:70px;}
+.bg_logo04{background:url(../image/icon/21thFox.png) left center no-repeat; width:76px; height:70px;}
+		/*lianjie*/
+.webLink{ padding:53px 0; line-height:0; font-size:0;}
+.Link_text{ margin-left:-32px;}
+.linkTxt_item{ width:25%; padding-left:32px; display:inline-block; font-size:1rem; line-height:1;}
+.linkTit{ font-size:2em; padding-bottom:12px;}
+.linkCont{ columns:2;}
+.linkCont { line-height:1.2; font-size:1.2em;}
+/********/
+.theLast{ padding:26px; text-align:center; background-color:#1f222c;}
+.otherWebBox{ margin-bottom:16px;}
+.otherWebBox a{padding:0 16px; display:inline-block;}
